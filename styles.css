@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /*/Primary*/
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+/*Neutral*/
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-family: "outfit", sans-serif;
+    background-color: var(--Very-dark-blue-card-BG);
+}
+
+.main-container {
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+.container {
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+.card {
+    background-color: var(--Very-dark-blue-card-BG);
+    margin: 1em;
+    padding: 1.5em;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.picture {
+    position: relative;
+}
+
+.picture:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cyan-overlay {
+    color: var(--Cyan);
+    opacity: 1;
+}
+
+
+.nft-image:hover:after {
+    opacity: 4;
+}
+
+.nft-image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    position: relative;
+    background: var(--Cyan);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    opacity: 0;
+}
+
+.text {
+    color: white;
+    margin-top: 1.5em;
+}
+
+.text h2 {
+    margin-bottom: 0.7em;
+}
+
+.text h4 {
+    margin-bottom: 1em;
+    color:var(--Soft-blue);
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.eth-icon {
+    margin-right: 0.2em;
+    vertical-align: sub;
+}
+
+.price {
+    color: var(--Cyan);
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.days {
+    color: var(--Soft-blue);
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.creator-section {
+    display: flex;
+    margin-top: 1.23em;
+    align-items: center;
+}
+
+/*span*/
+.creator {
+    color: var(--Soft-blue);
+    font-weight: 400;
+} 
+
+.creator-image {
+    display: block;
+    max-width: 10%;
+    margin-right: 0.8em;
+    align-content: center;
+    border: solid;
+    border-radius: 20px;
+    border-color: white;
+    border-width: thin;
+}
+
+.creator-name {
+    color: white;
+}
+
+.offer {
+    display: flex;
+    margin-bottom: 0.9em;
+    justify-content: space-between;
+}
+
+hr.line {
+    color: var(--Very-dark-blue-line);
+}
+
+
+@media (min-width: 700px) {
+
+    .container {
+        width: 30%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
